@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  bot_core:
+    env_file:
+      - .env
+    environment:
+      - TELEGRAM_APITOKEN=${TELEGRAM_APITOKEN}
+      - MONGO_URL=${MONGO_URL}
+    build: .
+    links: 
+      - bot_mongo_db
+    restart: always
+  
+  bot_parser:
+    environment:
+      - MONGO_URL=${MONGO_URL}
+    build: ./_parsers
+    env_file:
+      - ./_parsers/.env
+    links:
+      - bot_mongo_db
+    restart: always
+  
+  bot_mongo_db:
+    build: ./_db
+    volumes:
+      - /usr/local/mongodb/bot_mongo_db:/data
+    restart: always
+    ports:
+      - 27017:27017

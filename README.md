@@ -15,3 +15,6 @@ Before start you need provide 2 environment files:
 ### Start project:
 `docker-compose build`
 `docker-compose up`
+
+### Additional info
+Be aware that this project use data from AWS S3 bucket that I don't share, to establish proper work you need to create and configure your own data sources. 

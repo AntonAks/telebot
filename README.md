@@ -1,4 +1,9 @@
-# telebot
+# telebot (Ukrainian language)
+My first telegram bot on Golang. 
+Funtionality:
+1. Parse and show news
+2. Connected to predition data
+3. Connected to aphorisms data
 
 My attempts to study GO language with developing Telegram Bot.
 Bot consists of 3 componnents in docker containers:

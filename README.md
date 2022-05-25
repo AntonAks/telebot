@@ -23,3 +23,7 @@ Before start you need provide 2 environment files:
 
 ### Additional info
 Be aware that this project use data from AWS S3 bucket that I don't share, to establish proper work you need to create and configure your own data sources. 
+
+
+### Elample
+![alt text](https://github.com/AntonAks/telebot/blob/main/telebot_pic.jpg?raw=true)
